@@ -8,7 +8,7 @@ Analysis of 3 years of website sessions, orders and refunds (470K+ sessions, 32K
 - [Executive Summary](#executive-summary)
 - [Insights](#insights)
 - [Recommendations](#recommendations)
-- [Assumptions and Caveats](#assumptions-and-caveats)
+- [Assumptions](#assumptions)
 
 # Project Background
 
@@ -123,19 +123,22 @@ Since all 4 bears went on sale, each order earns **$40.41 instead of $30.50 (+32
 - **Launch impact:** Profit per order rose in **every period**, and the biggest jump came with the Mini Bear launch in Feb 2014.
 - **Profit drivers & cross-sell:** **90%** of the gain came from customers adding a second bear, mostly the Mini Bear, not from customers choosing a more expensive first bear.
 - **Cannibalisation:** The new bears did **not** take sales from Mr. Fuzzy. Mr. Fuzzy orders per 100 sessions rose from **about 3** in 2012 to **5–6** after the new bears launched.
-- **Refunds:** Refunds take **$2.71** off every order. Sugar Panda is returned most often, and a Mr. Fuzzy spike in Aug–Sep 2014 cost about **$9K**.
+- **Refunds:** Refunds take **$2.71** off every order. Sugar Panda is returned most often, and a Mr. Fuzzy spike in Aug–Sep 2014 cost about **$9.15K**.
 
 The following sections explore each of these areas in detail and highlight opportunities for improvement.
 
 Below is the overview page from the Power BI dashboard, and more examples are included throughout the report.
 
-![Overview dashboard](images/01_overview.png)
+![Overview dashboard](images/dashboard/01_overview.png)
 
 # Insights
 
 ### Launch impact
 
 - **Profit per order rose in every period.** It grew from **$30.50** (Mr. Fuzzy only) to $31.71, $33.16, $35.99 and finally **$40.41** after the Mini Bear launch. Prices never changed, so the gain comes from *what* customers buy, not from higher prices.
+
+    ![Profit per order by month](images/charts/07_profit_per_order.png)
+
 - **More visitors buy something.** Conversion rose from **4.2%** to **7.5%** of sessions. It dipped only once, from 6.7% to 6.2% in the cross-sell period.
 - **Traffic grew a lot, so totals would be misleading.** Monthly sessions grew from a few thousand in 2012 to over 20K in early 2015, so total profit would rise even without new bears. That is why this analysis compares **per order** and **per 100 sessions**.
 - **The expansion added about $210K of profit.** In the Mini Bear period, 21,166 orders earned **$40.41** each instead of $30.50. That is **$209,780 more profit** than if nothing had changed, and **$188,805 (90%)** of it came from customers buying a second bear.
@@ -143,48 +146,54 @@ Below is the overview page from the Power BI dashboard, and more examples are in
 ### Profit drivers & cross-sell
 
 - **The first bear earns the same; the second bear made the gain.** Profit from the main bear stayed at about **$31** in every period. Profit from add-ons grew from **$0 to $8.92** per order, which is about **90%** of the $9.91 gain.
+
+    ![Profit per order split into main bear and add-on](images/charts/08_profit_split.png)
+
 - **Cross-selling grew with Sugar Panda and took off with the Mini Bear.** The share of orders with a second bear rose from **4.2%** when cross-sell started to 13.1% with Sugar Panda and **34.9%** with the Mini Bear (about 1 in 3 orders).
 - **The Mini Bear is the add-on customers choose.** It is the second bear in **6 out of 10** two-bear orders, and **88%** of all Mini Bears are sold as an add-on. Of its $102.9K profit in the Mini Bear period, $91.0K came from add-on sales.
 - **Add-ons are now a real part of the business.** Since Feb 2014, **22%** of all profit comes from second bears. Mr. Fuzzy and Sugar Panda buyers add a second bear most often (**38%** and **36%** of their orders since cross-sell started), Love Bear buyers less often (25%).
 
-![Cross-sell dashboard](images/02_cross_sell.png)
+![Cross-sell dashboard](images/dashboard/02_cross_sell.png)
 
 ### Cannibalisation
 
 - **Mr. Fuzzy kept selling.** Out of every 100 website sessions, about **3** ordered a Mr. Fuzzy in 2012. After the new bears launched, this stayed at about **5–6**, with an average of about **5**. If the new bears had taken Mr. Fuzzy's sales, this line would have dropped. Instead, the new bears added **1–4 extra orders per 100 sessions** on top. This suggests they brought extra sales instead of replacing Mr. Fuzzy.
 
 
-    ![Mr. Fuzzy orders per 100 sessions](images/05_mr_fuzzy_per_100.png)
+    ![Mr. Fuzzy orders per 100 sessions](images/charts/05_mr_fuzzy_per_100.png)
 
 
 - **Mr. Fuzzy lost share, not sales.** Mr. Fuzzy is still the main bear in about **2 out of 3** orders (about 14K of 21K orders in the Mini Bear period). The share went down only because customers now have more bears to choose from.
 
-    ![Unit sold by bear, as main bear and as add-on](images/06_mainvsaddon_unitsold.png)
+    ![Units sold by bear, as main bear and as add-on](images/charts/06_mainvsaddon_unitsold.png)
 
 
 - **Mr. Fuzzy is still the biggest earner.** Mr. Fuzzy made **$447.5K** profit in the Mini Bear period, almost all as the main bear, compared with $159.6K for Love Bear, $145.3K for Sugar Panda and $102.9K for Mini Bear.
 
-    ![Profit by bear, as main bear and as add-on](images/04_main_vs_addon.png)
+    ![Profit by bear, as main bear and as add-on](images/charts/04_profit_by_bear.png)
 
 
 ### Refunds
 
 - **Refunds take $2.71 off every order.** In the Mini Bear period, profit per order drops from **$40.44 to $37.73** after refunds (about 7%).
-- **Sugar Panda is returned most often; the Mini Bear almost never.** Refund rates are **6.0%** for Sugar Panda, 5.2% for Mr. Fuzzy, 2.2% for Love Bear and **1.3%** for Mini Bear. Sugar Panda's refund rate is above the other bears' in most months.
-- **Mr. Fuzzy refunds spiked in Aug–Sep 2014.** About **1 in 7** Mr. Fuzzy bears were returned (13.8% and 13.3%), compared with fewer than 1 in 20 (4.4%) in other months. The extra refunds cost about **$9.1K**. The data does not record why bears were returned, so the cause of this jump is unknown.
-- **The Mini Bear keeps the most profit after refunds.** Net margin (profit after refunds ÷ sales) is **67.0%** for Mini Bear, 62.5% for Sugar Panda, 60.3% for Love Bear and 55.8% for Mr. Fuzzy.
+- **Sugar Panda is returned most often; the Mini Bear almost never.** Refund rates are **5.96%** for Sugar Panda, 5.2% for Mr. Fuzzy, 2.2% for Love Bear and **1.32%** for Mini Bear. Sugar Panda's refund rate is above the other bears' in most months.
+- **Mr. Fuzzy refunds spiked in Aug–Sep 2014.** About **1 in 7** Mr. Fuzzy bears were returned (13.8% and 13.3%), compared with about 1 in 23 (4.4%) in other months. The extra refunds cost about **$9.15K**. The data does not record why bears were returned, so the cause of this jump is unknown.
 
-![Refunds dashboard](images/03_refunds.png)
+    ![Monthly refund rate by bear](images/charts/09_refund_spike.png)
+
+- **The Mini Bear keeps the most profit after refunds.** Net margin (profit after refunds ÷ sales) is **67.0%** for Mini Bear, 62.6% for Sugar Panda, 60.3% for Love Bear and 56.0% for Mr. Fuzzy.
+
+![Refunds dashboard](images/dashboard/03_refunds.png)
 
 # Recommendations
 
 Based on the uncovered insights, the following recommendations are provided for the CEO and the merchandising team:
 
-- The Mini Bear is sold as an add-on **88%** of the time, has the lowest refund rate (**1.3%**) and the highest net margin (**67%**). **Launch another low-priced, high-margin bear designed to be bought as a second bear.** If 5% more orders added it, it would earn about **$19.5K more profit per year**.
+- The Mini Bear is sold as an add-on **88%** of the time, has the lowest refund rate (**1.32%**) and the highest net margin (**67%**). **Launch another low-priced, high-margin bear designed to be bought as a second bear.** If 5% more orders added it, it would earn about **$19.5K more profit per year**.
 - Mr. Fuzzy sales held steady (about **5** orders per 100 sessions) while 3 bears were added. **Keep expanding the range, and keep Mr. Fuzzy as the main product.**
 - Love Bear buyers add a second bear less often (**25%**) than Mr. Fuzzy buyers (**38%**). **Test a better add-on offer for Love Bear buyers**, for example a matching gift bear.
-- Mr. Fuzzy refunds jumped to about **1 in 7** in Aug–Sep 2014, costing about **$9K**. **Find out what caused the jump in that period, and set up a monthly alert when a bear's refund rate goes above 10%.**
-- Sugar Panda has the highest refund rate (**6.0%**) in most months. **Find out why Sugar Panda is returned more often, for example by reviewing customer feedback.**
+- Mr. Fuzzy refunds jumped to about **1 in 7** in Aug–Sep 2014, costing about **$9.15K**. **Find out what caused the jump in that period, and set up a monthly alert when a bear's refund rate goes above 10%.**
+- Sugar Panda has the highest refund rate (**5.96%**) in most months. **Find out why Sugar Panda is returned more often, for example by reviewing customer feedback.**
 - Website tests ran during the same period as the launches. **Run the next product launch as an A/B test** to measure its real effect.
 
 # Assumptions
@@ -197,5 +206,5 @@ Throughout the analysis, several assumptions were made to manage challenges with
 - **The periods have different lengths and seasons.** The Sugar Panda period is only 8 weeks and includes Christmas and Valentine's Day, while the Mini Bear period covers 13 months. Periods are compared per order, not by totals.
 - **Refund reasons are not in the data.** The analysis shows which bears are returned and when, but not why.
 - **Profit = price − product cost.** Shipping, marketing and other costs are not in the data.
-- **The dollar estimates are scenarios.** The $19.5K new add-on estimate assumes order volume stays at the level of the last 12 full months (Mar 2014 – Feb 2015) and $20.50 profit per add-on, like the Mini Bear. The $9.1K spike cost assumes a normal Mr. Fuzzy refund rate of 4.4%.
+- **The dollar estimates are scenarios.** The $19.5K new add-on estimate assumes order volume stays at the level of the last 12 full months (Mar 2014 – Feb 2015) and $20.50 profit per add-on, like the Mini Bear. The $9.15K spike cost assumes a normal Mr. Fuzzy refund rate of 4.4%.
 - **The data is a sample dataset.** Maven Fuzzy Factory is a fictional company from a Maven Analytics practice dataset.
